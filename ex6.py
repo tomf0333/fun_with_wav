@@ -4,7 +4,7 @@ def main():
 
 def HaLsAdI(name):
     for i in name:
-        i = chr(i) + 23
+        i = TAAAAAMMMMMMM
     return name
 
 
