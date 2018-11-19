@@ -1,4 +1,4 @@
-# Senior
+# Senior kaki face
 def main():
     pass
 
