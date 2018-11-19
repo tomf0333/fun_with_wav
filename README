@@ -4,25 +4,7 @@ tom feldboy
 
 Description :
 
-	in this file i made a program that searches for words in a matrix (both 
-	are received as parameters) in different directions and writes those words
-	to an output file (also received as parameter)
-	
-	list of the functions i made for this exercise:
-		1. for each search direction i made a function, that way it is very
-		understood what each direction does.
-		2. functions that check the validity of the parameters so the main
-		check function will be cleaner.
-		3. a function that checks if a word is exactly in a string so when i
-		find one letter that is the same in words and matrix i can immediatly
-		check if it the whole word.
-		4. a function that flips the matrix to the side so i could read each
-		line in it as the *right* direction and it will read it diagonally.
-		5. a function that flips the matrix upside down so i could read each
-		line in it as the *right* direction and it will read it upside down.
-		6. a function that turns a list of words into a list of tuples that
-		each cell in it has a word in the list of words and next to it the
-		amount of time that word appeared in the list from the start.
+TOM IS GAY
 
 worked with : 
 	
