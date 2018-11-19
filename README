@@ -1,0 +1,95 @@
+tomf0333
+315962597
+tom feldboy
+
+Description :
+
+	in this file i made a program that searches for words in a matrix (both 
+	are received as parameters) in different directions and writes those words
+	to an output file (also received as parameter)
+	
+	list of the functions i made for this exercise:
+		1. for each search direction i made a function, that way it is very
+		understood what each direction does.
+		2. functions that check the validity of the parameters so the main
+		check function will be cleaner.
+		3. a function that checks if a word is exactly in a string so when i
+		find one letter that is the same in words and matrix i can immediatly
+		check if it the whole word.
+		4. a function that flips the matrix to the side so i could read each
+		line in it as the *right* direction and it will read it diagonally.
+		5. a function that flips the matrix upside down so i could read each
+		line in it as the *right* direction and it will read it upside down.
+		6. a function that turns a list of words into a list of tuples that
+		each cell in it has a word in the list of words and next to it the
+		amount of time that word appeared in the list from the start.
+
+worked with : 
+	
+	a pen and paper for the matrix thinking
+
+used websites : stackoverflow for some insight into dict
+
+specail comments:
+	
+	for the check function i chose the change_matrix_for_diagonal because it
+	was the most complex and interesting one i made.
+	even though it is not immediatly in find_words_in_matrix, it is called
+	from many of the functions in find_words_in_matrix.
+	
+	tests:
+		test 1:
+			input matrix = [[1, 2, 3], [4, 5, 6]]
+			expected matrix = [[3], [2, 6], [1, 5], [4]]
+			the first test is an OK test, just to see that in a basic scenario
+			the function acts accordingly.
+			
+			the function worked well.
+		
+		test 2:
+			input matrix = [[]]
+			expected matrix = [[]]
+			in this test i wanted to see if an empty matrix, when turned
+			diagonally, will stay empty.
+			
+			apperantly my function returned the matrix [], which in fact isn't
+			a matrix but a list, so i made the neccesarry changes in my code
+			so it would return an empty string in this case.
+		
+		test 3:
+			input matrix = [[1], [2], [3], [4], [5], [6], [7]]
+			expected matrix = [[1], [2], [3], [4], [5], [6], [7]]
+			when inputing a matrix with only one column in each row going over
+			it diagonally will produce the same matrix.
+			
+			the function worked well.
+		
+		test 4:
+			input matrix = [[1, 2, 3, 4, 5, 6, 7]]
+			expected matrix = [[7], [6], [5], [4], [3], [2], [1]]
+			when inputing a matrix with only one row, the diagonal matrix
+			should be the same as the previous test only reversed, because my
+			function starts from the top left of the matrix.
+			
+			and it really does return the same matrix reversed.
+		
+		test 5:
+			input matrix = [["a", "b", 3], [43, "re", True], ["tup", "is", 0]]
+			expected matrix = [[3], ['b', True], ['a', 're', 0], [43, 'is'] 
+																	,['tup']]
+			a test to see if given a matrix where the words in it are more
+			then one char, numbers, boolean expressions and mix them all
+			together will it still work.
+			
+			it worked great.
+			
+			
+	*** extra special comment:
+		in the check args functions i called the constant ERROR_MESSAGE.
+		this constants only purpse is to notify the user what he did wrong in
+		the parameters input.
+		i wanted to be able to use that varriable instead of passing every
+		check function with it, so i change it in the function.
+		i am aware that usually this is a bad idea but to me it seems that
+		here speciffically it is an okay way to use that.
+		just wanted to write this here to get it out of the way.
